@@ -5,59 +5,98 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
 const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-xl py-1">Вітаю 👋</div>
+    <div class="text-5xl font-bold">Я — Радченко Михайло</div>
+    <div class="text-3xl py-3 font-bold">Репетитор з технічної механіки та суміжних дисциплін</div>
     <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
+      <p class="text-lg">
+        Допомагаю студентам та інженерам розібратися з 
+        <b>Теоретичною механікою</b>, <b>Опором Матеріалів</b>, 
+        <b>ТММ</b>, <b>Деталями машин</b> та іншими інженерними дисциплінами.
+        Допомагаю розіпратися з алгоритмами розрахункаів та розв’язанням задач.
+        Пояснюю складні теми простими словами, з прикладами та надаю консультації при самостійному виконанні.
+      </p>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <a class="btn" href="https://t.me/radmikh" target="_blank">Зв'язатися в Telegram</a>
+      <a class="btn btn-outline ml-5" href="https://t.me/MechMentor_Bot" target="_blank">Telegram бот для реєстрації</a>
+      <a href="mailto:radmykh@gmail.com" target="_blank" class="btn">
+        Написати на E-mail
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Мої курси</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="Курс: Теоретична механіка"
+    img="/theor_mech.webp"
+    desc="Повний курс: статика, кінематика, динаміка. Теорія та практика з прикладами розв’язків."
+    url="/courses/theoretical-mechanics"
+    badge="ONLINE"
   />
   <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Курс: Опір матеріалів"
+    img="/strength_materials.webp"
+    desc="Методи розрахунку напружень, деформацій та стійкості елементів конструкцій."
+    url="/courses/strength-of-materials"
+    badge="POPULAR"
   />
   <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Курс: Теорія механізмів і машин (ТММ)"
+    img="/tmm.webp"
+    desc="Аналіз і синтез механізмів, побудова планів швидкостей і прискорень, розрахунки."
+    url="/courses/tmm"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Курс: Деталі машин"
+    img="/machine_parts.webp"
+    desc="Розрахунок та конструювання деталей машин: вали, підшипники, з'єднання, передачі."
+    url="/courses/machine-parts"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Курс: Статика"
+    img="/statics.webp"
+    desc="Основи рівноваги тіл і систем сил. Розрахунки опор, балок та рам."
+    url="/courses/statics"
+    badge="POPULAR"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Курс: Пружність"
+    img="/elasticity.webp"
+    desc="Методи аналізу напружено-деформованого стану тіл. Основи розрахунку складних конструкцій."
+    url="/courses/elasticity"
+    badge="POPULAR"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Курс: Інші дисципліни"
+    img="/engineering.webp"
+    desc="Індивідуальні заняття з інших інженерних та технічних дисциплін за вашим запитом."
+    url="/courses/other"
+    badge="CUSTOM"
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Останні статті з блогу</div>
   </div>
 
   {

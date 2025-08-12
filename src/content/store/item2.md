@@ -1,15 +1,51 @@
 ---
-title: "Demo Item 2"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-custom_link_label: "Custom Btn"
-custom_link: "https://customurl.com/"
-updatedDate: "Sep 11 2022"
-pricing: "$10"
-oldPricing: "$25.5"
-checkoutUrl: "https://checkouturl.com/"
-heroImage: "/itemPreview.webp"
+title: "Геометрія: трикутники та прямокутний трикутник"
+description: "Основи роботи з трикутниками та використання прямокутного трикутника в інженерних розрахунках."
+custom_link_label: "Переглянути приклади"
+custom_link: "https://radmykh.pp.ua/triangles"
+updatedDate: "Aug 11 2025"
+pricing: "Безкоштовно"
+oldPricing: ""
+checkoutUrl: "https://radmykh.pp.ua/"
+heroImage: "/triangles_course.webp"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Трикутники — одна з найважливіших фігур у геометрії та технічній механіці.  
+Вони використовуються для побудови креслень, визначення розмірів, розрахунку сил і кутів у конструкціях.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+---
+
+## Види трикутників
+1. **Рівносторонній** — усі сторони та кути рівні (по 60°).
+2. **Рівнобедрений** — дві сторони і два кути рівні.
+3. **Різносторонній** — усі сторони різні, усі кути різні.
+4. **Прямокутний** — один кут дорівнює 90°.
+
+---
+
+## Прямокутний трикутник
+Це особливий випадок трикутника, який має:
+- **Гіпотенузу** — найбільшу сторону, протилежну прямому куту.
+- **Катети** — дві сторони, що утворюють прямий кут.
+
+### Теорема Піфагора
+\[
+a^2 + b^2 = c^2
+\]
+де \(a\) і \(b\) — катети, \(c\) — гіпотенуза.
+
+💡 *Приклад:* Якщо катети мають довжини 3 м і 4 м, то гіпотенуза:
+\[
+c = \sqrt{3^2 + 4^2} = 5 \ \text{м}
+\]
+
+---
+
+## Використання в інженерії
+- Побудова проєкцій сил (розкладання сили на горизонтальну та вертикальну складові).
+- Розрахунок відстаней у просторі.
+- Створення жорстких геометричних форм у конструкціях.
+
+---
+
+📌 **Порада:** Вивчення прямокутного трикутника — ключ до розуміння **тригонометрії**, яка використовується у проєкціях сил, аналізі руху та кресленнях.

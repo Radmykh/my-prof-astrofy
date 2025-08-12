@@ -1,0 +1,284 @@
+[
+  {
+    "category": "Курс Пружності",
+    "items": [
+      {
+        "title": "Пружність — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Вступ до теорії пружності: напруження, деформації та базові поняття (модуль Юнга, коефіцієнт Пуассона).",
+        "url": "/courses/pruzhnist-1",
+        "badge": "NEW",
+        "slug": "pruzhnist-1"
+      },
+      {
+        "title": "Пружність — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Розв'язування задач: розподіл напружень, згин, кручення, практичні приклади.",
+        "url": "/courses/pruzhnist-2",
+        "badge": "NEW",
+        "slug": "pruzhnist-2"
+      }
+    ]
+  },
+  {
+    "category": "Курс Статика",
+    "items": [
+      {
+        "title": "Статика — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Основи статики: рівновага точкових сил, моменти, реакції опор.",
+        "url": "/courses/statyka-1",
+        "badge": "NEW",
+        "slug": "statyka-1"
+      },
+      {
+        "title": "Статика — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Аналіз простих рам, балок та опорних систем.",
+        "url": "/courses/statyka-2",
+        "badge": "NEW",
+        "slug": "statyka-2"
+      }
+    ]
+  },
+  {
+    "category": "Курс Базові знання",
+    "items": [
+      {
+        "title": "Короткий курс — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Огляд математичних та фізичних знань, потрібних для курсу інженерних дисциплін.",
+        "url": "/courses/bazovi-1",
+        "badge": "NEW",
+        "slug": "bazovi-1"
+      },
+      {
+        "title": "Повноцінний курс",
+        "img": "/post_img.webp",
+        "desc": "Розширений базовий курс: математика для інженера, одиниці та основні методи.",
+        "url": "/courses/bazovi-full",
+        "badge": "NEW",
+        "slug": "bazovi-full"
+      }
+    ]
+  },
+  {
+    "category": "Курс Теоретична Механіка",
+    "items": [
+      {
+        "title": "Статика — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Статика в контексті теоретичної механіки: статиcтичні задачі й методи.",
+        "url": "/courses/theory-stat-1",
+        "badge": "NEW",
+        "slug": "theory-stat-1"
+      },
+      {
+        "title": "Кінематика — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Кінематика: рухи тіл, швидкості, прискорення, параметри траєкторій.",
+        "url": "/courses/theory-kin-2",
+        "badge": "NEW",
+        "slug": "theory-kin-2"
+      },
+      {
+        "title": "Динаміка — ч.3",
+        "img": "/post_img.webp",
+        "desc": "Динаміка: закони руху, рівняння Ньютона, приклади задач.",
+        "url": "/courses/theory-dyn-3",
+        "badge": "NEW",
+        "slug": "theory-dyn-3"
+      }
+    ]
+  },
+  {
+    "category": "Курс Опір матеріалів",
+    "items": [
+      {
+        "title": "Прості навантаження — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Напруження і деформації під простими навантаженнями.",
+        "url": "/courses/opir-1",
+        "badge": "NEW",
+        "slug": "opir-1"
+      },
+      {
+        "title": "Комбіновані напруження — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Аналіз комбінованих навантажень, критерії міцності.",
+        "url": "/courses/opir-2",
+        "badge": "NEW",
+        "slug": "opir-2"
+      },
+      {
+        "title": "Переміщення — ч.3",
+        "img": "/post_img.webp",
+        "desc": "Розрахунок прогинів і переміщень елементів.",
+        "url": "/courses/opir-3",
+        "badge": "NEW",
+        "slug": "opir-3"
+      }
+    ]
+  },
+  {
+    "category": "Курс Теорія машин та механізмів",
+    "items": [
+      {
+        "title": "Шарнірно-важільні механізми — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Аналіз простих механізмів, побудова кінематики.",
+        "url": "/courses/mach-1",
+        "badge": "NEW",
+        "slug": "mach-1"
+      },
+      {
+        "title": "Зубчасте зачеплення — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Типи зубчастих передач, основні формули та розрахунки.",
+        "url": "/courses/mach-2",
+        "badge": "NEW",
+        "slug": "mach-2"
+      },
+      {
+        "title": "Кулачок — ч.3",
+        "img": "/post_img.webp",
+        "desc": "Кулачкові механізми: профілі кулачків, побудова руху.",
+        "url": "/courses/mach-3",
+        "badge": "NEW",
+        "slug": "mach-3"
+      }
+    ]
+  },
+  {
+    "category": "Курс Деталі машин",
+    "items": [
+      {
+        "title": "Редуктор — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Проектування редукторів: типи, характеристики, складові та елеменити розрахунків.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "detali-1"
+      },
+      {
+        "title": "Конвеєр — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Проектування конвеєру та його елементів: типи, характеристики, складові та елементи розрахунків.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "detali-2"
+      },
+      {
+        "title": "Проект на вибір — ч.3",
+        "img": "/post_img.webp",
+        "desc": "Розширений набір задач та практичних прикладів.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "detali-3"
+      }
+    ]
+  },
+  {
+    "category": "Курс Матеріалознавство",
+    "items": [
+      {
+        "title": "Сталі — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Властивості сталей, класифікація та застосування.",
+        "url": "/courses/materialy-1",
+        "badge": "not available",
+        "slug": "materialy-1"
+      },
+      {
+        "title": "Інші метали — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Огляд кольорових металів та їх властивостей.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "materialy-2"
+      },
+      {
+        "title": "Сплави — ч.3",
+        "img": "/post_img.webp",
+        "desc": "Сплави кольорових металів, їх властивості та застосування.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "materialy-3"
+      },
+      {
+        "title": "Неметалеві матеріали — ч.4",
+        "img": "/post_img.webp",
+        "desc": "Властивості неметалевих матеріалів, їх застосування в інженерії.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "materialy-4"
+      },
+      {
+        "title": "Будівельні матеріали — ч.5",
+        "img": "/post_img.webp",
+        "desc": "Огляд будівельних матеріалів: бетон, цегла, дерево.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "materialy-5"
+      },
+      {
+        "title": "Композитні матеріали — ч.6",
+        "img": "/post_img.webp",
+        "desc": "Огляд кольорових металів та їх властивостей.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "materialy-6"
+      }
+    ]
+  },
+  {
+    "category": "Курс Будівельна механіка",
+    "items": [
+      {
+        "title": "Будівельна механіка — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Основи механіки для будівельних конструкцій.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "bd-mech-1"
+      },
+      {
+        "title": "Спец.розділ — ч.2",
+        "img": "/post_img.webp",
+        "desc": "Поглиблений куср по спеціалізованим темам",
+        "url": "#",
+        "badge": "not available",
+        "slug": "bd-mech-2"
+      }
+    ]
+  },
+  {
+    "category": "Курс Технологія машинобудування",
+    "items": [
+      {
+        "title": "Верстати — ч.1",
+        "img": "/post_img.webp",
+        "desc": "Опис існуючих верстатів, їх призначення та застосування.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "teh-mash-1"
+      },
+      {
+        "title": "Інструменти та планування— ч.2",
+        "img": "/post_img.webp",
+        "desc": "Курс по основам технології машинобудування: інструменти, планування та організація виробництва.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "teh-mash-2"
+      },
+      {
+        "title": "Взаімозамінність, стандартизація та технічні виміри — ч.3",
+        "img": "/post_img.webp",
+        "desc": "Курс по основам взаімозамінності, стандартизації та технічних вимірів.",
+        "url": "#",
+        "badge": "not available",
+        "slug": "teh-mash-3"
+      }
+    ]
+  }
+]

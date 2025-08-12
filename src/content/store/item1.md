@@ -1,15 +1,56 @@
 ---
-title: "Demo Item 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-custom_link_label: "Live Preview"
-custom_link: "https://demourl.com/"
-updatedDate: "Sep 15 2022"
-pricing: "$15"
-badge: "Featured"
-checkoutUrl: "https://checkouturl.com/"
-heroImage: "/itemPreview.webp"
+title: "Базові знання з математики — пропорції та рівняння"
+description: "Повторення та закріплення ключових математичних інструментів для технічних розрахунків."
+custom_link_label: "Пройти міні-курс"
+custom_link: "https://radmykh.pp.ua/"
+updatedDate: "Aug 11 2025"
+pricing: "Безкоштовно"
+badge: "Базовий рівень"
+checkoutUrl: "https://radmykh.pp.ua/"
+heroImage: "/base_math.webp"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Математична підготовка — це фундамент для будь-яких інженерних розрахунків.  
+Навіть у складних розділах технічної механіки всі формули та моделі спираються на базові поняття: **пропорції** та **рівняння з невідомими**.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+---
+
+## Пропорції
+Пропорція — це рівність двох відношень:
+
+\[
+\frac{a}{b} = \frac{c}{d}
+\]
+
+Вона часто використовується для:
+- Переведення одиниць вимірювання.
+- Розрахунку масштабів у кресленнях.
+- Задач на прямопропорційні та обернено пропорційні залежності.
+
+💡 *Приклад:* Якщо довжина балки в кресленні 10 см відповідає 5 м у реальності, то для відрізка 15 см реальна довжина буде:
+\[
+\frac{10}{5} = \frac{15}{x} \quad \Rightarrow \quad x = 7.5 \ \text{м}
+\]
+
+---
+
+## Рівняння з невідомими
+Рівняння допомагають знаходити невідомі величини, коли відомі залежності між ними.
+
+**Види рівнянь:**
+- Лінійні: \( ax + b = 0 \)
+- Квадратні: \( ax^2 + bx + c = 0 \)
+- Системи рівнянь: кілька рівнянь з кількома невідомими.
+
+💡 *Приклад:* Для балки з двома опорами та рівномірно розподіленим навантаженням можна скласти систему рівнянь для знаходження реакцій опор.
+
+---
+
+## Для чого це в інженерії
+- **Пропорції** допомагають швидко масштабувати та перераховувати дані.
+- **Рівняння** — основний інструмент для розрахунку сил, моментів та переміщень.
+- Без цього кроку неможливо впевнено рухатися до *статики* та *кінематики*.
+
+---
+
+📌 **Наступний крок:** опанування тригонометрії для роботи з проєкціями сил і кутами в задачах.

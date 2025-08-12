@@ -1,15 +1,50 @@
 ---
-title: "Demo Item 3"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-custom_link_label: "Custom Btn"
-custom_link: "https://customurl.com/"
-updatedDate: "Sep 11 2022"
-pricing: "$10"
-oldPricing: "$25.5"
-checkoutUrl: "https://checkouturl.com/"
-heroImage: "/itemPreview.webp"
+title: "Основи фізики: три закони Ньютона"
+description: "Ключові принципи класичної механіки: закони руху Ньютона та їхнє застосування в інженерії."
+custom_link_label: "Дізнатись більше"
+custom_link: "https://radmykh.pp.ua/newton-laws"
+updatedDate: "Aug 11 2025"
+pricing: "Безкоштовно"
+oldPricing: ""
+checkoutUrl: "https://radmykh.pp.ua/signup"
+heroImage: "/newton_laws.webp"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Ісаак Ньютон сформулював три фундаментальні закони руху, які стали основою класичної механіки.  
+Вони описують взаємозв’язок між силами, що діють на тіло, та рухом цього тіла.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+---
+
+## 1. Перший закон (Закон інерції)
+**Формулювання:**  
+Тіло зберігає стан спокою або рівномірного прямолінійного руху, якщо на нього не діють зовнішні сили або якщо дія цих сил скомпенсована.
+
+💡 *Приклад:* Книга на столі не рухається, доки ми її не штовхнемо.
+
+---
+
+## 2. Другий закон (Основний закон динаміки)
+**Формулювання:**  
+Прискорення тіла прямо пропорційне силі, що на нього діє, і обернено пропорційне масі тіла:
+\[
+F = m \cdot a
+\]
+
+💡 *Приклад:* Чим більша сила штовхання візка, тим швидше він набирає швидкість, але важчий візок розганяти важче.
+
+---
+
+## 3. Третій закон (Закон дії та протидії)
+**Формулювання:**  
+Кожна дія має рівну за величиною та протилежну за напрямом протидію.
+
+💡 *Приклад:* Коли ми стрибаємо з човна на берег, човен відштовхується у зворотний бік.
+
+---
+
+## Використання в інженерії
+- Розрахунок сил у механізмах.
+- Аналіз руху транспортних засобів.
+- Моделювання роботи конструкцій під навантаженням.
+
+📌 **Порада:** Розуміння цих законів — фундамент для подальшого вивчення статики, динаміки та теорії механізмів.

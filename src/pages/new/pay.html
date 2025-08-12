@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Підтримати автора</title>
+  <style>
+    /* твої стилі */
+  </style>
+</head>
+<body>
+  <h1>Підтримати автора</h1>
+  <p>Номер картки: <strong> 5408 8100 4187 2200</strong></p>
+
+  <label>Сума (грн): <input type="number" id="amount" min="1" /></label><br/>
+  <label>Коментар: <input type="text" id="comment" /></label><br/>
+  <button id="payBtn">Оплатити</button>
+
+  <script>
+    document.getElementById('payBtn').addEventListener('click', async () => {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const comment = document.getElementById('comment').value || 'Підтримка автора';
+
+      if (!amount || amount <= 0) {
+        alert('Введіть правильну суму');
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/create-mono-payment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ amount, comment })
+        });
+
+        if (!response.ok) throw new Error('Помилка сервера');
+
+        const data = await response.json();
+        if (data.paymentUrl) {
+          window.open(data.paymentUrl, '_blank');
+        } else {
+          alert('Не вдалося отримати посилання на оплату');
+        }
+      } catch (err) {
+        alert('Помилка: ' + err.message);
+      }
+    });
+  </script>
+</body>
+</html>

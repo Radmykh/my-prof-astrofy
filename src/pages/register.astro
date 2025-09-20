@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Реєстрація на курс" sideBarActiveItemID="register">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-4">Реєстрація на курс</h1>
+    <p class="mb-6">Заповніть форму, і ми з вами зв'яжемося.</p>
+
+    <form id="registerForm" class="space-y-4">
+      <div>
+        <label class="block font-semibold" for="name">Ім'я</label>
+        <input class="input input-bordered w-full" type="text" name="name" required />
+      </div>
+
+      <div>
+        <label class="block font-semibold" for="email">Email</label>
+        <input class="input input-bordered w-full" type="email" name="email" required />
+      </div>
+
+      <div>
+        <label class="block font-semibold" for="phone">Телефон</label>
+        <input class="input input-bordered w-full" type="tel" name="phone" required placeholder="+380XXXXXXXXX" />
+      </div>
+
+      <div>
+        <label class="block font-semibold" for="course">Курс</label>
+        <select class="select select-bordered w-full" name="course" required>
+          <option value="Технічна механіка">Технічна механіка</option>
+          <option value="Теоретична механіка">Теоретична механіка</option>
+          <option value="Матеріалознавство">Основи матеріалознавства</option>
+          <option value="Опір матеріалів">Опір матеріалів</option>
+          <option value="Статика">Статика</option>
+          <option value="Пружність">Пружність</option>
+          <option value="Теорія машин та механізмів">Теорія машин та механізмів</option>
+          <option value="Технології машинобудування">Технології машинобудування</option>
+          <option value="Деталі машин">Деталі машин</option>
+          <option value="Будівельна механіка">Будівельна механіка(недоступно)</option>
+          <option value="Інженерні програми">Інженерні програми</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Бажаний спосіб зв'язку:</label>
+        <div class="flex flex-col space-y-1">
+          <label><input type="radio" name="contact_method" value="Телефон" required /> Телефонний дзвінок</label>
+          <label><input type="radio" name="contact_method" value="Email" /> Email</label>
+          <label><input type="radio" name="contact_method" value="Viber" /> Viber</label>
+          <label><input type="radio" name="contact_method" value="Telegram" /> Telegram</label>
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-semibold" for="comment">Коментар</label>
+        <textarea class="textarea textarea-bordered w-full" name="comment" rows="4" placeholder="Ваші побажання чи питання"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Зареєструватися</button>
+    </form>
+
+    <!-- Повідомлення після сабміту -->
+    <div id="message" class="mt-4 text-green-600 font-semibold"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const messageDiv = document.getElementById("message");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch("/api/register", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          messageDiv.textContent = "Дякуємо! Ми зв'яжемося з вами найближчим часом.";
+          messageDiv.classList.remove("text-red-600");
+          messageDiv.classList.add("text-green-600");
+          form.reset();
+        } else {
+          messageDiv.textContent = "Сталася помилка. Спробуйте ще раз.";
+          messageDiv.classList.remove("text-green-600");
+          messageDiv.classList.add("text-red-600");
+        }
+      } catch (err) {
+        console.error(err);
+        messageDiv.textContent = "Сталася помилка. Спробуйте ще раз.";
+        messageDiv.classList.remove("text-green-600");
+        messageDiv.classList.add("text-red-600");
+      }
+    });
+  </script>
+</BaseLayout>

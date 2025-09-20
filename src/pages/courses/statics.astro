@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Курс: Статика" sideBarActiveItemID="courses">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-4">Курс: Статика</h1>
+
+    <p class="text-lg mb-6">
+      Курс охоплює основи статики: рівновагу тіл, аналіз сил і моментів, розрахунок балок, рам і ферм. Вивчаються методи визначення реакцій опор, побудова епюр та розрахунок конструкцій під різними навантаженнями.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Перелік занять</h2>
+    <ol class="list-decimal pl-6 space-y-2">
+      <li>Сума сил та моментів</li>
+      <li>Геометричні характеристики поперечних перерізів</li>
+      <li>Консольні та двоопорні балки навантажені простими силами. Епюри</li>
+      <li>Балки навантажені розподіленою силою. Екстремум моменту</li>
+      <li>Інтегральний зв'язок між навантаженням та епюрами</li>
+      <li>Розрахунок рам</li>
+      <li>Розрахунок триточкових конструкцій</li>
+      <li>Ферми</li>
+      <li>Балки та рами під кутом</li>
+    </ol>
+
+    <div class="mt-6">
+      <a href="https://drive.google.com/drive/folders/1iKt03dnDx3nb_INJzYa8MWZ6gVockjWq?usp=drive_link" class="link link-primary font-semibold">
+        Матеріали до курсу
+      </a>
+    </div>
+
+    <div class="mt-10">
+      <a href="/register" class="btn btn-primary">Записатися на курс</a>
+    </div>
+  </div>
+</BaseLayout>

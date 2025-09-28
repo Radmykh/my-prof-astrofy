@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const sortament = [
+  {
+    title: "Двотаври",
+    href: "/material/table_sortament/i-beams",
+    desc: "Сортамент двотаврових балок різних розмірів"
+  },
+  {
+    title: "Швелери",
+    href: "/material/table_sortament/channels",
+    desc: "Сортамент швелерів: гарячекатаний та холодногнутий"
+  },
+  {
+    title: "Рівнобічні кутики",
+    href: "/material/table_sortament/equal-angles",
+    desc: "Кутики зі сторонами однакової довжини"
+  },
+  {
+    title: "Нерівнобічні кутики",
+    href: "/material/table_sortament/unequal-angles",
+    desc: "Кутики зі сторонами різної довжини"
+  },
+  {
+    title: "Труби",
+    href: "/material/table_sortament/round-tubes",
+    desc: "Циліндричні сталеві труби різних діаметрів та товщини"
+  },
+  {
+    title: "Листи",
+    href: "/material/table_sortament/sheets",
+    desc: "Стальні листи різної товщини та ширини"
+  },
+  {
+    title: "Шини / Полоси",
+    href: "/material/table_sortament/bars",
+    desc: "Стальні полоси та шини різної ширини та товщини"
+  },
+  {
+    title: "Круглий прокат",
+    href: "/material/table_sortament/round-bars",
+    desc: "Сталевий круглий прокат різного діаметру"
+  },
+  {
+    title: "Профільні труби",
+    href: "/material/table_sortament/square-pipes",
+    desc: "Квадратні та прямокутні профільні труби"
+  }
+];
+---
+
+<BaseLayout title="Таблиці сортаменту" sideBarActiveItemID="material">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-6">Таблиці сортаменту металопрокату</h1>
+    <p class="mb-6 text-gray-700">
+      Виберіть категорію прокату, щоб переглянути доступні розміри та параметри.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {sortament.map((item) => (
+        <a href={item.href} class="block p-5 rounded-2xl shadow hover:shadow-lg border hover:border-primary transition">
+          <h2 class="text-xl font-semibold mb-2">{item.title}</h2>
+          <p class="text-sm text-gray-600">{item.desc}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

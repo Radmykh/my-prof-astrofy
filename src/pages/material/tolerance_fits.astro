@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TableLayout from "../../layouts/TableLayout.astro";
+import fs from "fs";
+import path from "path";
+
+const filePath = path.resolve("./src/data/tolerance_fits.json");
+const jsonData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+---
+
+<BaseLayout title="Таблиця допусків та посадок" sideBarActiveItemID="material">
+  <TableLayout 
+    title="Таблиця допусків та посадок"
+    columns={jsonData.columns}
+    rows={jsonData.rows}
+  />
+</BaseLayout>

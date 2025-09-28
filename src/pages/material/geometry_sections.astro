@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const sections = [
+  { title: "Квадрат", imgBtn: "/img_article/1_square_icon.gif", imgContent:"/img_article/1_square_full.gif"},
+  { title: "Прямокутник", imgBtn: "/img_article/2_rectangle_icon.gif", imgContent:"/img_article/2_rectangle_full.gif" },
+  { title: "Коло", imgBtn: "/img_article/3_circle_icon.gif" ,imgContent:"/img_article/3_circle_full.gif" },
+  { title: "Трикутник", imgBtn: "/img_article/4_triangle_icon.gif" ,imgContent:"/img_article/4_triangle_full.gif" },
+  { title: "Рівносторонній трикутник", imgBtn: "/img_article/5_equilateral_triangle_icon.gif" ,imgContent:"/img_article/5_equilateral_triangle_full.gif" },
+  { title: "Прямокутний трикутник", imgBtn: "/img_article/6_right_triangle_icon.gif" ,imgContent:"/img_article/6_right_triangle_full.gif" },
+  { title: "Півкруг", imgBtn: "/img_article/7_semicircle_icon.gif" ,imgContent:"/img_article/7_semicircle_full.gif" },
+  { title: "Чверть круга", imgBtn: "/img_article/8_quarter_circle_icon.gif" ,imgContent:"/img_article/8_quarter_circle_full.gif" },
+  { title: "Сектор", imgBtn: "/img_article/9_sector_icon.gif"  ,imgContent:"/img_article/9_sector_full.gif" },
+  { title: "Еліпс", imgBtn: "/img_article/10_ellipse_icon.gif" ,imgContent:"/img_article/10_ellipse_full.gif" },
+];
+
+---
+<BaseLayout title="Геометричні характеристики перерізів" sideBarActiveItemID="material">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-6">Геометричні характеристики суцільних перерізів</h1>
+
+    <div class="accordion space-y-2">
+      {sections.map((section) => (
+        <section class="accordion-item border rounded w-full">
+          {/* Кнопка */}
+          <div class="accordion-btn flex items-center gap-4 px-3 py-0 cursor-pointer bg-gray-100 w-full">
+            {/* Картинка без фіксованої висоти */}
+            <img src={section.imgBtn} alt={section.title} class="w-20 h-20 object-contain" />
+            <span class="font-medium">{section.title}</span>
+          </div>
+
+          {/* Вміст */}
+          <div class="accordion-content hidden p-3 bg-white">
+            <p>Формули, таблиці та зображення для {section.title.toLowerCase()}.</p>
+            <img src={section.imgContent} alt={section.title} class="mt-2 w-80" />
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".accordion-item");
+
+      items.forEach((item) => {
+        const btn = item.querySelector(".accordion-btn");
+        const content = item.querySelector(".accordion-content");
+
+        btn.addEventListener("click", () => {
+          content.classList.toggle("hidden");
+        });
+      });
+    });
+  </script>
+</BaseLayout>
+

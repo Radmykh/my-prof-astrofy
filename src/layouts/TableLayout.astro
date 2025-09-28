@@ -1,0 +1,103 @@
+---
+const { title, columns, rows } = Astro.props;
+---
+
+<div class="prose max-w-none">
+  <h1 class="text-3xl font-bold mb-6">{title}</h1>
+  <p class="mb-4 text-gray-700">
+    Наведіть на рядок або стовпчик — він підсвітиться. Клік на рядок виділяє весь рядок, клік на клітинку виділяє і рядок, і стовпчик.
+  </p>
+
+  <div class="overflow-auto border rounded">
+    <table class="border-collapse border w-full text-center">
+      <thead class="bg-gray-100 sticky top-0">
+        <tr>
+          <th class="border p-2"></th>
+          {columns.map((col, colIndex) => (
+            <th class="border p-2" data-col={colIndex}>{col}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, rowIndex) => (
+          <tr data-row={rowIndex}>
+            <th class="border p-2 text-left" data-row={rowIndex}>{row.name}</th>
+            {columns.map((col, colIndex) => (
+              <td class="border p-2" data-row={rowIndex} data-col={colIndex}>{row[col]}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+td, th {
+  position: relative;
+  cursor: pointer;
+}
+td.hovered, th.hovered {
+  background-color: rgba(0, 150, 255, 0.15);
+}
+td.selected, th.selected {
+  background-color: rgba(0, 150, 255, 0.35);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const table = document.querySelector("table");
+  const rows = table.querySelectorAll("tbody tr");
+  const headers = table.querySelectorAll("thead th");
+
+  // Клітинки
+  table.querySelectorAll("td").forEach(cell => {
+    cell.addEventListener("mouseenter", () => {
+      const row = cell.dataset.row;
+      const col = cell.dataset.col;
+      rows[row].querySelectorAll("td").forEach(td => td.classList.add("hovered"));
+      table.querySelectorAll(`td[data-col='${col}'], th[data-col='${col}']`).forEach(el => el.classList.add("hovered"));
+    });
+    cell.addEventListener("mouseleave", () => table.querySelectorAll(".hovered").forEach(el => el.classList.remove("hovered")));
+
+    cell.addEventListener("click", () => {
+      const row = cell.dataset.row;
+      const col = cell.dataset.col;
+
+      const rowCells = rows[row].querySelectorAll("td");
+      const isRowSelected = Array.from(rowCells).every(td => td.classList.contains("selected"));
+      rowCells.forEach(td => td.classList.toggle("selected", !isRowSelected));
+
+      const colCells = table.querySelectorAll(`td[data-col='${col}'], th[data-col='${col}']`);
+      const isColSelected = Array.from(colCells).every(el => el.classList.contains("selected"));
+      colCells.forEach(el => el.classList.toggle("selected", !isColSelected));
+    });
+  });
+
+  // Заголовки рядків
+  table.querySelectorAll("tbody th").forEach(th => {
+    th.addEventListener("mouseenter", () => {
+      const row = th.dataset.row;
+      rows[row].querySelectorAll("td, th").forEach(el => el.classList.add("hovered"));
+    });
+    th.addEventListener("mouseleave", () => table.querySelectorAll(".hovered").forEach(el => el.classList.remove("hovered")));
+    th.addEventListener("click", () => {
+      const row = th.dataset.row;
+      const rowCells = rows[row].querySelectorAll("td, th");
+      const isSelected = Array.from(rowCells).every(el => el.classList.contains("selected"));
+      rowCells.forEach(el => el.classList.toggle("selected", !isSelected));
+    });
+  });
+
+  // Заголовки стовпчиків
+  headers.forEach(th => {
+    th.addEventListener("click", () => {
+      const col = th.dataset.col;
+      const colCells = table.querySelectorAll(`td[data-col='${col}'], th[data-col='${col}']`);
+      const isSelected = Array.from(colCells).every(el => el.classList.contains("selected"));
+      colCells.forEach(el => el.classList.toggle("selected", !isSelected));
+    });
+  });
+});
+</script>
